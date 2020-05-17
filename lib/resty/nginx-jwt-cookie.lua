@@ -40,8 +40,6 @@ function M.auth(claim_specs)
 
     ngx.log(ngx.INFO, "JWT: " .. cjson.encode(jwt_obj))
 
-    -- write the uid variable
-    ngx.var.uid = jwt_obj.payload.sub
 end
 
 return M
